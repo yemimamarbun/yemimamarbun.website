@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering Past Tenses - English Learning</title>
+    <style>
+        :root {
+            --primary: #0a6d37;
+            --secondary: #71b8bc;
+            --accent: #4895ef;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #4cc9f0;
+            --warning: #642811;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #567f67;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: #eee;
+            margin: 2rem 0 1rem;
+            border-bottom: 2px solid var(--warning);
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color:#212529;
+            margin: 1.5rem 0 1rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color:#082b0e;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav a {
+            color: white;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .nav a:hover {
+            background-color: var(--primary);
+        }
+        
+        .section {
+            padding: 3rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .card {
+            background: rgb(193, 224, 203);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .example {
+            background-color: #648d75;
+            border-left: 4px solid var(--accent);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+        }
+        
+        .highlight {
+            color: var(--warning);
+            font-weight: bold;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            margin: 0.5rem 0;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+        
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .question {
+            margin-bottom: 2rem;
+            color: #642811;
+        }
+        
+        .options {
+            margin: 1rem 0;
+        }
+        
+        .option {
+            display: block;
+            margin: 0.5rem 0;
+            padding: 0.8rem;
+            background-color: #addcc6;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .option:hover {
+            background-color: #e1e1e1;
+        }
+        
+        .option.selected {
+            background-color: var(--accent);
+            color: white;
+        }
+        
+        .option.correct {
+            background-color: var(--success);
+            color: white;
+        }
+        
+        .option.incorrect {
+            background-color: rgb(202, 9, 9);
+            color: white;
+        }
+        
+        .result {
+            text-align: center;
+            margin: 2rem 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav a {
+                width: 100%;
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mastering Past Tenses</h1>
+            <p>Your comprehensive guide to understanding and using past tenses in English</p>
+        </div>
+    </header>
+    
+    <nav class="nav">
+        <a href="#simple-past">Simple Past</a>
+        <a href="#past-continuous">Past Continuous</a>
+        <a href="#past-perfect">Past Perfect</a>
+        <a href="#past-perfect-continuous">Past Perfect Continuous</a>
+        <a href="#quiz">Take the Quiz</a>
+    </nav>
+    
+    <div class="container">
+        <section id="introduction" class="section">
+            <h2>Introduction to Past Tenses</h2>
+            <p>Past tenses in English are used to talk about actions or states that occurred in the past. There are four main past tenses in English:</p>
+            <ul>
+                <li>Simple Past</li>
+                <li>Past Continuous</li>
+                <li>Past Perfect</li>
+                <li>Past Perfect Continuous</li>
+            </ul>
+            <p>Each of these tenses has specific uses and forms that help convey exactly when an action took place and whether it was completed or ongoing.</p>
+        </section>
+        
+        <section id="simple-past" class="section">
+            <h2>Simple Past Tense</h2>
+            <div class="card">
+                <h3>Form</h3>
+                <p>For regular verbs: <span class="highlight">Base form + -ed</span> (e.g., worked, played, watched)</p>
+                <p>For irregular verbs: Use the past form (e.g., went, ate, wrote)</p>
+                
+                <div class="example">
+                    <p>Positive: She <span class="highlight">worked</span> yesterday.</p>
+                    <p>Negative: She <span class="highlight">did not work</span> yesterday.</p>
+                    <p>Question: <span class="highlight">Did</span> she <span class="highlight">work</span> yesterday?</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Usage</h3>
+                <ul>
+                    <li>Completed actions in the past</li>
+                    <li>Past habits or states</li>
+                    <li>Sequences of actions in the past</li>
+                </ul>
+                
+                <div class="example">
+                    <p>I <span class="highlight">visited</span> Paris last summer.</p>
+                    <p>When I was a child, I <span class="highlight">played</span> football every day.</p>
+                    <p>He <span class="highlight">woke up</span>, <span class="highlight">had</span> breakfast, and <span class="highlight">went</span> to work.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="past-continuous" class="section">
+            <h2>Past Continuous Tense</h2>
+            <div class="card">
+                <h3>Form</h3>
+                <p><span class="highlight">Was/Were + present participle (-ing form)</span></p>
+                
+                <div class="example">
+                    <p>Positive: They <span class="highlight">were watching</span> TV at 8 pm yesterday.</p>
+                    <p>Negative: They <span class="highlight">were not watching</span> TV at 8 pm yesterday.</p>
+                    <p>Question: <span class="highlight">Were</span> they <span class="highlight">watching</span> TV at 8 pm yesterday?</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Usage</h3>
+                <ul>
+                    <li>Actions in progress at a specific time in the past</li>
+                    <li>Interrupted actions in the past</li>
+                    <li>Parallel actions in the past</li>
+                    <li>Setting the scene in a story</li>
+                </ul>
+                
+                <div class="example">
+                    <p>At 6 pm yesterday, I <span class="highlight">was cooking</span> dinner.</p>
+                    <p>I <span class="highlight">was reading</span> when the phone <span class="highlight">rang</span>.</p>
+                    <p>While I <span class="highlight">was studying</span>, my brother <span class="highlight">was playing</span> video games.</p>
+                    <p>The sun <span class="highlight">was shining</span>, and birds <span class="highlight">were singing</span>.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="past-perfect" class="section">
+            <h2>Past Perfect Tense</h2>
+            <div class="card">
+                <h3>Form</h3>
+                <p><span class="highlight">Had + past participle</span></p>
+                
+                <div class="example">
+                    <p>Positive: She <span class="highlight">had finished</span> her work before the meeting started.</p>
+                    <p>Negative: She <span class="highlight">had not finished</span> her work before the meeting started.</p>
+                    <p>Question: <span class="highlight">Had</span> she <span class="highlight">finished</span> her work before the meeting started?</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Usage</h3>
+                <ul>
+                    <li>Actions completed before another action in the past</li>
+                    <li>Experiences up to a certain point in the past</li>
+                    <li>Unrealized hopes or wishes in the past</li>
+                </ul>
+                
+                <div class="example">
+                    <p>When we arrived at the cinema, the film <span class="highlight">had already started</span>.</p>
+                    <p>I <span class="highlight">had never seen</span> such a beautiful sunset before that day.</p>
+                    <p>I wish I <span class="highlight">had studied</span> harder for the test.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="past-perfect-continuous" class="section">
+            <h2>Past Perfect Continuous Tense</h2>
+            <div class="card">
+                <h3>Form</h3>
+                <p><span class="highlight">Had been + present participle (-ing form)</span></p>
+                
+                <div class="example">
+                    <p>Positive: He <span class="highlight">had been working</span> there for ten years before he retired.</p>
+                    <p>Negative: He <span class="highlight">had not been working</span> there for long before he quit.</p>
+                    <p>Question: <span class="highlight">Had</span> he <span class="highlight">been working</span> there long before he quit?</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Usage</h3>
+                <ul>
+                    <li>Duration of an action up to a certain point in the past</li>
+                    <li>Cause of something in the past</li>
+                    <li>Actions that were recently stopped</li>
+                </ul>
+                
+                <div class="example">
+                    <p>She <span class="highlight">had been waiting</span> for over an hour when the bus finally arrived.</p>
+                    <p>His hands were dirty because he <span class="highlight">had been gardening</span>.</p>
+                    <p>I <span class="highlight">had been studying</span> all day, so I was tired.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="quiz" class="section">
+            <h2>Test Your Knowledge: Past Tenses Quiz</h2>
+            <p>Answer the following questions to test your understanding of past tenses.</p>
+            
+            <div class="quiz-container">
+                <div id="quiz-questions">
+                    <div class="question" id="q1">
+                        <h3>Question 1: Which sentence uses the Simple Past correctly?</h3>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, 'q1', 'a')">a) She was going to the store yesterday.</div>
+                            <div class="option" onclick="selectOption(this, 'q1', 'b')">b) She went to the store yesterday.</div>
+                            <div class="option" onclick="selectOption(this, 'q1', 'c')">c) She had gone to the store yesterday.</div>
+                            <div class="option" onclick="selectOption(this, 'q1', 'd')">d) She has gone to the store yesterday.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="question" id="q2">
+                        <h3>Question 2: What were you doing when I called you last night?</h3>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, 'q2', 'a')">a) I watched TV.</div>
+                            <div class="option" onclick="selectOption(this, 'q2', 'b')">b) I was watching TV.</div>
+                            <div class="option" onclick="selectOption(this, 'q2', 'c')">c) I had watched TV.</div>
+                            <div class="option" onclick="selectOption(this, 'q2', 'd')">d) I had been watching TV.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="question" id="q3">
+                        <h3>Question 3: By the time we arrived at the party, most guests _______.</h3>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, 'q3', 'a')">a) left</div>
+                            <div class="option" onclick="selectOption(this, 'q3', 'b')">b) were leaving</div>
+                            <div class="option" onclick="selectOption(this, 'q3', 'c')">c) had left</div>
+                            <div class="option" onclick="selectOption(this, 'q3', 'd')">d) have left</div>
+                        </div>
+                    </div>
+                    
+                    <div class="question" id="q4">
+                        <h3>Question 4: She _______ for that company for five years before she got promoted.</h3>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, 'q4', 'a')">a) worked</div>
+                            <div class="option" onclick="selectOption(this, 'q4', 'b')">b) was working</div>
+                            <div class="option" onclick="selectOption(this, 'q4', 'c')">c) had worked</div>
+                            <div class="option" onclick="selectOption(this, 'q4', 'd')">d) had been working</div>
+                        </div>
+                    </div>
+                    
+                    <div class="question" id="q5">
+                        <h3>Question 5: Which sentence is NOT correct?</h3>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, 'q5', 'a')">a) I lived in London for three years.</div>
+                            <div class="option" onclick="selectOption(this, 'q5', 'b')">b) I was living in London for three years.</div>
+                            <div class="option" onclick="selectOption(this, 'q5', 'c')">c) I had lived in London for three years before I moved to Paris.</div>
+                            <div class="option" onclick="selectOption(this, 'q5', 'd')">d) I had been living in London for three years before I moved to Paris.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn" onclick="checkAnswers()">Submit Answers</button>
+                
+                <div id="quiz-results" class="result hidden">
+                    <h3>Your Results</h3>
+                    <p id="score"></p>
+                    <p id="feedback"></p>
+                    <button class="btn" onclick="resetQuiz()">Try Again</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Mastering English Tenses. All rights reserved.</p>
+            <p>Created for English learners worldwide.</p>
+        </div>
+    </footer>
+    
+    <script>
+        const answers = {
+            q1: 'b',
+            q2: 'b',
+            q3: 'c',
+            q4: 'd',
+            q5: 'b'
+        };
+        
+        const userAnswers = {};
+        
+        function selectOption(element, questionId, option) {
+            const options = document.querySelectorAll(`#${questionId} .option`);
+            options.forEach(opt => opt.classList.remove('selected'));
+
+            element.classList.add('selected');
+            
+            userAnswers[questionId] = option;
+        }
+        
+        function checkAnswers() {
+            let score = 0;
+            const totalQuestions = Object.keys(answers).length;
+            
+            for (const questionId in answers) {
+                const correctAnswer = answers[questionId];
+                const userAnswer = userAnswers[questionId];
+                
+                if (userAnswer === correctAnswer) {
+                    score++;
+                    
+                    document.querySelector(`#${questionId} .option:nth-child(${correctAnswer.charCodeAt(0) - 96})`).classList.add('correct');
+                } else if (userAnswer) {
+                    
+                    document.querySelector(`#${questionId} .option:nth-child(${userAnswer.charCodeAt(0) - 96})`).classList.add('incorrect');
+                    document.querySelector(`#${questionId} .option:nth-child(${correctAnswer.charCodeAt(0) - 96})`).classList.add('correct');
+                } else {
+                    
+                    document.querySelector(`#${questionId} .option:nth-child(${correctAnswer.charCodeAt(0) - 96})`).classList.add('correct');
+                }
+            }
+        
+            const percentage = Math.round((score / totalQuestions) * 100);
+
+            document.getElementById('score').textContent = `You scored ${score} out of ${totalQuestions} (${percentage}%)`;
+            let feedback = '';
+            if (percentage >= 80) {
+                feedback = 'Excellent! You have a great understanding of past tenses.';
+            } else if (percentage >= 60) {
+                feedback = 'Good job! You understand most past tense concepts but could use some review.';
+            } else if (percentage >= 40) {
+                feedback = 'Not bad! Review the material and try again.';
+            } else {
+                feedback = 'Keep practicing! Review the past tense sections and try the quiz again.';
+            }
+            
+            document.getElementById('feedback').textContent = feedback;
+            document.getElementById('quiz-results').classList.remove('hidden');
+            document.getElementById('quiz-results').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function resetQuiz() {
+            
+            const options = document.querySelectorAll('.option');
+            options.forEach(opt => {
+                opt.classList.remove('selected', 'correct', 'incorrect');
+            });
+            
+            for (const questionId in userAnswers) {
+                delete userAnswers[questionId];
+            }
+            
+            document.getElementById('quiz-results').classList.add('hidden');
+            document.getElementById('quiz').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
